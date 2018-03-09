@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor Estudiantes</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Gestor Estudiantes</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Operaciones</div>
+        <div class="panel-body">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-info" id="calculoPromedio" data-target=".bs-example-modal-sm"><span
+                        class="glyphicon glyphicon-filter"></span> Calcular Nota Promedio
+                </button>
+                <button type="button" class="btn btn-info" id="calculoNotaMayor"><span
+                        class="glyphicon glyphicon-chevron-up"></span> Nota Mayor
+                </button>
+                <button type="button" class="btn btn-info" id="calculoNotaMenor"><span
+                        class="glyphicon glyphicon-chevron-down"></span> Nota Menor
+                </button>
+            </div>
+
+            <hr>
+
+            <h4>Registro Estudiante</h4>
+
+            <form>
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input type="number" class="form-control" id="codigo" placeholder="Código" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="nota">Nota</label>
+                    <input type="number" class="form-control" id="nota" placeholder="Nota" min="0" max="5">
+                </div>
+                <button type="button" class="btn btn-success" id="registroEstudiante">Registrar Estudiante</button>
+            </form>
+
+            <hr>
+
+            <h4>Estudiantes Registrados</h4>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Nota</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+                <tbody id="notas">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+<script type="application/javascript" src="js/app.js"></script>
+</body>
+</html>
